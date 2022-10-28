@@ -115,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				FAC44573290B98DC005757E8 /* PPCurrencyConversion */,
-				FAC445AE290B9F5E005757E8 /* Extensions */,
 				FAC4458D290B98DF005757E8 /* PPCurrencyConversionTests */,
 				FAC44597290B98DF005757E8 /* PPCurrencyConversionUITests */,
 				FAC44572290B98DC005757E8 /* Products */,
@@ -143,6 +142,7 @@
 				FAC445AA290B99FD005757E8 /* Resources */,
 				FAC445BD290BB9C5005757E8 /* Network */,
 				FACD8EB0290C40FC00AC2951 /* Storage */,
+				FAC445AE290B9F5E005757E8 /* Extensions */,
 			);
 			path = PPCurrencyConversion;
 			sourceTree = "<group>";

@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  PPCurrencyConversion
+
+  Created by murad on 28/10/2022.
+  
+*/
+
+"Done" = "終わり";
+"Cancel" = "キャンセル";
+"Something went wrong\nPlease try again!!!" = "エラーが発生しました\nもう一度お試しください!!!";

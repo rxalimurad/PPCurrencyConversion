@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  PPCurrencyConversion
+
+  Created by murad on 28/10/2022.
+  
+*/
+
+"Done" = "Done";
+"Cancel" = "Cancel";
+"Something went wrong\nPlease try again!!!" = "Something went wrong\nPlease try again!!!";

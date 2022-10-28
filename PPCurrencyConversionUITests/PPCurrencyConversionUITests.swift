@@ -26,6 +26,22 @@ class PPCurrencyConversionUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+        let enterAmountTextField = app.textFields["Enter Amount"]
+        enterAmountTextField.tap()
+        
+        let key = app/*@START_MENU_TOKEN@*/.keys["1"]/*[[".keyboards.keys[\"1\"]",".keys[\"1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        key.tap()
+                
+        let doneButton = app.toolbars["Toolbar"].buttons["Done"]
+        doneButton.tap()
+        app.textFields["Select Currency"].tap()
+        doneButton/*@START_MENU_TOKEN@*/.press(forDuration: 0.7);/*[[".tap()",".press(forDuration: 0.7);"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        let collectionViewsQuery = app.collectionViews
+        let element = collectionViewsQuery.children(matching: .cell).element(boundBy: 0).children(matching: .other).element
+        XCTAssert(element.exists)
+
+        
+                                
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.

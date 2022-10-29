@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct KeyValuePair: Codable {
+struct KeyValuePair: Codable, Comparable {
+    static func < (lhs: KeyValuePair, rhs: KeyValuePair) -> Bool {
+        return lhs.value < rhs.value
+    }
+    
     var key = ""
     var value = ""
 }

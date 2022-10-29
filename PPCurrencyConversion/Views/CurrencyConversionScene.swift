@@ -89,7 +89,7 @@ class CurrencyConversionScene: UIViewController {
             .receive(on: RunLoop.main)
             .sink { [weak self] _ in
                 guard let self = self else { return }
-                self.errorLabel.isHidden = !self.viewModel.showError
+                self.errorLabel.isHidden = !self.viewModel.showError || self.spinner.isHidden
             }.store(in: &bindings)
     }
     

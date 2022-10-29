@@ -10,7 +10,7 @@ import Foundation
 enum Constants {
     
     enum Global {
-        static let cacheTimeInMinutes: Double = 0.1
+        static let cacheTimeInMinutes: Double = 30
     }
     enum Network {
         static let apiKeyParamName = "app_id"

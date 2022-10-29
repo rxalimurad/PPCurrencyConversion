@@ -24,13 +24,13 @@ final class CurrencyConversionService: CurrencyConversionServiceType {
         let req = Endpoint(sericeName: .currencyList,
                            method: .get,
                            queryItems: [Constants.Network.apiKeyParamName: Constants.Network.apiKeyParamValue] )
-        return apiClient.request(router: req).eraseToAnyPublisher()
+        return apiClient.request(endPoint: req).eraseToAnyPublisher()
     }
     
     func getLatestRates() -> AnyPublisher<CurrencyRatesModel, NetworkRequestError> {
         let req = Endpoint(sericeName: .lastestRateList,
                            method: .get,
                            queryItems: [Constants.Network.apiKeyParamName: Constants.Network.apiKeyParamValue])
-        return apiClient.request(router: req).eraseToAnyPublisher()
+        return apiClient.request(endPoint: req).eraseToAnyPublisher()
     }
 }

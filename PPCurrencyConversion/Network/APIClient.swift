@@ -8,13 +8,13 @@
 import Combine
 import Foundation
 protocol APIClientType {
-    func request<T:Decodable>(router: URLRequestConvertibleType) -> AnyPublisher<T,NetworkRequestError>
+    func request<T:Decodable>(endPoint: URLRequestConvertibleType) -> AnyPublisher<T,NetworkRequestError>
 }
 
 final class APIClient: APIClientType {
     
-    func request<T>(router: URLRequestConvertibleType) -> AnyPublisher<T, NetworkRequestError> where T : Decodable {
-        let urlRequest = (try? router.urlRequest())!
+    func request<T>(endPoint: URLRequestConvertibleType) -> AnyPublisher<T, NetworkRequestError> where T : Decodable {
+        let urlRequest = (try? endPoint.urlRequest())!
 
         return URLSession.shared.dataTaskPublisher(for : urlRequest ).map { a in a.data }.decode(type: T.self, decoder: JSONDecoder())
             .mapError { error in
@@ -28,3 +28,4 @@ final class APIClient: APIClientType {
     }
     
 }
+

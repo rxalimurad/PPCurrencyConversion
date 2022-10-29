@@ -69,7 +69,7 @@ final class CurrencyConversionViewModel: CurrencyConversionVMType {
         // if data is already cached and it's been cached for less than cacheTimeInMinutes minuts
         // no need to send api call
         if isNeededToFetchCurrencyList() {
-            debugPrint("fetching currency list from Server")
+            debugPrint("fetching currency list from Server \(service.self)")
             self.service.getCurrencyList()
                 .receive(on: RunLoop.main)
                 .sink {[weak self] error in
@@ -100,7 +100,7 @@ final class CurrencyConversionViewModel: CurrencyConversionVMType {
         // if data is already cached and it's been cached for less than cacheTimeInMinutes minuts
         // no need to send api call
         if isNeededToFetchRateList() {
-            debugPrint("fetching rate list from Server")
+            debugPrint("fetching rate list from Server \(service.self)")
             self.service.getLatestRates()
                 .receive(on: RunLoop.main)
                 .sink {[weak self] error in
